@@ -1,69 +1,75 @@
-# React + TypeScript + Vite
+# 🧾 React Spreadsheet App – Intern Assignment (Inscripts)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully interactive, spreadsheet-style web app built using **React 18**, **TypeScript**, **Tailwind CSS**, and **TanStack Table v8** — inspired by tools like Google Sheets and Airtable.
 
-Currently, two official plugins are available:
+This assignment was completed as part of the **React Intern Assignment** for **Inscripts**, matching the provided Figma design and functionality expectations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🔗 **Live Demo**: [https://spreadsheet-sepia.vercel.app](https://spreadsheet-sepia.vercel.app)  
+> 📁 **GitHub Repository**: [https://github.com/rohangahlot27/Spreadsheet](https://github.com/rohangahlot27/Spreadsheet)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔧 Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ⚛️ React 18
+- 🟦 TypeScript (strict mode)
+- 🌈 Tailwind CSS
+- 🧩 TanStack Table v8 (`@tanstack/react-table`)
+- ⚡ Vite
+- 🖼️ SVG + Material Icons
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- ✅ **Figma-perfect layout** including:
+  - Top bar with breadcrumbs, profile, search, notifications
+  - Secondary toolbar (Hide Fields, Sort, Filter, Cell View)
+  - Tabs: All Orders, Pending, Reviewed, Arrived
+- ✅ **Editable spreadsheet cells**
+  - Text, Date, Select, Checkbox, Number
+- ✅ **Keyboard navigation**
+  - Arrow keys for moving across cells
+- ✅ **Add/Delete Rows**
+- ✅ **Add/Delete Columns**
+  - Column types prompted dynamically
+- ✅ **Resizable Columns**
+  - Native drag-to-resize with TanStack
+- ✅ **Grouped column headers**
+  - `Financial Overview`, `ABC`, `Answer a Question`, `Extract`
+- ✅ **Responsive UI**, consistent with modern tools
+- ✅ **LocalStorage persistence** for table data and custom columns
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Folder Structure
+
+ ```Spreadsheet/
+├── public/
+├── src/
+│   ├── assets/                   
+│   ├── components/
+│   │   ├── Table.tsx
+│   │   ├── TopBar.tsx
+│   │   ├── SecondaryToolbar.tsx
+│   │   └── TitleTabs.tsx
+│   ├── types/
+│   │   └── index.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── .gitignore
+├── index.html
+├── README.md
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.ts
+├── tsconfig.json
+├── package.json
+└── package-lock.json
+
+👤 Author
+Developed by Rohan Gahlot
+
+
